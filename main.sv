@@ -12,38 +12,38 @@ module main(input logic clk_i, rst_i, data_val_i,
 logic [4:0] count = 5'b0, count_mod_i  = 5'b0;
 logic data_val_i_set = 0;
 //assign busy_o = 0;
- 
-always_ff @(posedge data_val_i) begin
-    data_val_i_set = 1;
-    busy_o = 1;
-    count_mod_i = data_mod_i;
-end
 
 always_ff @(posedge clk_i or posedge rst_i) begin
+  
+  if(data_val_i) begin
+    data_val_i_set <= 1;
+    busy_o <= 1;
+    count_mod_i <= data_mod_i;
+  end
 
   if(rst_i)
     begin
-      ser_data_o = 0;
-      busy_o = 0;
-      ser_data_val_o = 0;
+      ser_data_o <= 0;
+      busy_o <= 0;
+      ser_data_val_o <= 0;
     end
   else
   begin  
     if ((count_mod_i > 0) && (data_val_i_set))
        begin
-          ser_data_o = data_i[15 - count];
-          ser_data_val_o = 1; 
-         	busy_o = 1;
+          ser_data_o <= data_i[15 - count];
+          ser_data_val_o <= 1; 
+         	busy_o <= 1;
           count_mod_i <= count_mod_i - 1;
           count <= count + 1;
        end
     else
       begin  
       //count_mod_i = data_mod_i + 1;
-       count = 0;
-       ser_data_o = 0;
-       ser_data_val_o = 0;
-       busy_o = 0;
+       count <= 0;
+       ser_data_o <= 0;
+       ser_data_val_o <= 0;
+       busy_o <= 0;
     end
 end
 
