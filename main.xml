@@ -1,0 +1,14 @@
+<interfaceDefinition version='1.2' language='verilog' kind='module' name='main'>
+    <portList>
+
+      <port name='clk_i' direction='input' type='' kind=''> </port>
+      <port name='rst_i' direction='input' type='' kind=''> </port>
+      <port name='data_val_i' direction='input' type='' kind=''> </port>
+      <port name='data_i' direction='input' type='[15:0]' kind='array' packedDimension='[15:0]'> </port>
+      <port name='data_mod_i' direction='input' type='[4:0]' kind='array' packedDimension='[4:0]'> </port>
+      <port name='ser_data_o' direction='output' type='logic' kind=''> </port>
+      <port name='busy_o' direction='output' type='logic' kind=''> </port>
+      <port name='ser_data_val_o' direction='output' type='logic' kind=''> </port>
+
+    </portList>
+</interfaceDefinition>
