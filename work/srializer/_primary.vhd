@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity main is
+entity srializer is
     port(
         clk_i           : in     vl_logic;
         rst_i           : in     vl_logic;
@@ -11,4 +11,4 @@ entity main is
         ser_data_val_o  : out    vl_logic;
         busy_o          : out    vl_logic
     );
-end main;
+end srializer;

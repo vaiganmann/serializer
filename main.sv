@@ -1,54 +1,42 @@
 //****************************************************************
 //                  The main module
 //****************************************************************
-module main(input logic clk_i, rst_i, data_val_i, 
-            logic [15:0] data_i,
-            logic [4:0] data_mod_i ,
+`include "counter.sv"
+
+module srializer(input logic clk_i, rst_i, data_val_i, 
+            input logic [15:0] data_i,
+            input logic [4:0] data_mod_i ,
             output logic ser_data_o, ser_data_val_o,
             output bit  busy_o
             );
 
 
-logic [4:0] count = 5'b0, count_mod_i  = 5'b0;
-logic data_val_i_set = 0;
-//assign busy_o = 0;
+bit [4:0] count;
+bit overflow;
 
-always_ff @(posedge clk_i or posedge rst_i) begin
-  
-  if(data_val_i) begin
-    data_val_i_set <= 1;
-    busy_o <= 1;
-    count_mod_i <= data_mod_i;
-  end
+counter counter_inst(clk_i, rst_i, data_val_i, count, data_mod_i, overflow);
 
-  if(rst_i)
-    begin
-      ser_data_o <= 0;
-      busy_o <= 0;
-      ser_data_val_o <= 0;
-    end
-  else
-  begin  
-    if ((count_mod_i > 0) && (data_val_i_set))
+always_comb begin
+	busy_o = overflow;
+end
+
+always_comb begin
+    if (overflow == 0)
        begin
-          ser_data_o <= data_i[15 - count];
-          ser_data_val_o <= 1; 
-         	busy_o <= 1;
-          count_mod_i <= count_mod_i - 1;
-          count <= count + 1;
+          ser_data_o = data_i[15 - count];
+          ser_data_val_o = 1; 
        end
     else
       begin  
-      //count_mod_i = data_mod_i + 1;
-       count <= 0;
-       ser_data_o <= 0;
-       ser_data_val_o <= 0;
-       busy_o <= 0;
-    end
-end
-
-end  
+       ser_data_o = 0;
+       ser_data_val_o = 0;
+      end
+	end
+		
+	
 endmodule
+
+
 
 //****************************************************************
 //                  The testbench
@@ -63,7 +51,7 @@ logic [4:0] data_mod_i = 5'b00100;
 logic ser_data_o, ser_data_val_o;
 bit busy_o;  
 
-  main DUT  (.* , .rst_i(1'b0));
+  srializer DUT  (.* , .rst_i(1'b0));
 
 
 always_ff @(posedge clk_i) begin

@@ -3,45 +3,66 @@ K3
 13
 cModel Technology
 dD:\altera\lw9
-vmain
+vcounter
 Z0 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-VbBLKLIO^^Cb[GHOh6A?EZ2
+VD8lENa_Wjc1FeeMYLPF?z1
 r1
 !s85 0
 31
-Ii>D^e;BTi:nIVoZL2FQ5`1
-Z1 !s105 main_sv_unit
+I_>WY?Dc0KzEF?21F864[M2
 S1
-Z2 dD:\altera\serializer
-Z3 w1414590806
-Z4 8D:/altera/serializer/main.sv
-Z5 FD:/altera/serializer/main.sv
-L0 4
-Z6 OL;L;10.1c;51
-Z7 !s108 1414590820.261000
-Z8 !s107 D:/altera/serializer/main.sv|
-Z9 !s90 -reportprogress|300|-work|work|-vopt|-sv|D:/altera/serializer/main.sv|
-Z10 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z1 dD:\altera\serializer
+w1414683745
+8D:/altera/serializer/counter.sv
+FD:/altera/serializer/counter.sv
+L0 3
+Z2 OL;L;10.1c;51
+Z3 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
-!s100 J=<O^hClA=A^MTJzT;M1O0
+!s100 `]AMCRd[dEKF^U8kg9dbf1
+!s105 counter_sv_unit
+!s108 1414683750.901000
+!s107 D:/altera/serializer/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|D:/altera/serializer/counter.sv|
+vsrializer
+Z4 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VnXQm0TM_Ie>f5L3T4h<4f3
+r1
+31
+I@_OH;Ng@mg<bkWL3>c4601
+Z5 !s105 main_sv_unit
+S1
+R1
+Z6 w1414683734
+Z7 8D:\altera\serializer\main.sv
+Z8 FD:\altera\serializer\main.sv
+L0 6
+R2
+Z9 !s108 1414683750.538000
+Z10 !s107 counter.sv|D:\altera\serializer\main.sv|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-sv|D:\altera\serializer\main.sv|
+R3
+!s85 0
+!s100 GH?ai6<7?iO1all4m;VP:3
+!i10b 1
 vtestbench
-Z11 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+R4
 VhGfW:390DM[oDMzegDH9`2
 r1
 31
-IVB=Gl`oBMHNSGaJd8F1dN3
-R1
-S1
-R2
-R3
-R4
+Il=@@Nk@PMd?eKlLJYZcRd1
 R5
-L0 57
+S1
+R1
 R6
 R7
 R8
+L0 45
+R2
 R9
 R10
+R11
+R3
 !s85 0
+!s100 [^dg^FIG6M2_jkY?f5TBD2
 !i10b 1
-!s100 m<:>QGC:l_59o7m8fUGV22
