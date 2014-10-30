@@ -2,67 +2,88 @@ m255
 K3
 13
 cModel Technology
-dD:\altera\lw9
+Z0 dD:\altera\lw9
 vcounter
-Z0 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-VD8lENa_Wjc1FeeMYLPF?z1
-r1
-!s85 0
-31
-I_>WY?Dc0KzEF?21F864[M2
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 I4ThJYcI?Q8zPcE[`lQ8b3
+I4M;_ZoD7g]m]53DY__mm51
+Z2 VTe09zgS==Wcg5OL[[GgP93
+!s105 counter_sv_unit
 S1
-Z1 dD:\altera\serializer
-w1414683745
+Z3 dD:\altera\serializer
+w1414693495
 8D:/altera/serializer/counter.sv
 FD:/altera/serializer/counter.sv
 L0 3
-Z2 OL;L;10.1c;51
-Z3 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!i10b 1
-!s100 `]AMCRd[dEKF^U8kg9dbf1
-!s105 counter_sv_unit
-!s108 1414683750.901000
+Z4 OL;L;10.1c;51
+r1
+!s85 0
+31
+!s108 1414700960.087000
 !s107 D:/altera/serializer/counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|D:/altera/serializer/counter.sv|
-vsrializer
-Z4 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-VnXQm0TM_Ie>f5L3T4h<4f3
-r1
-31
-I@_OH;Ng@mg<bkWL3>c4601
-Z5 !s105 main_sv_unit
-S1
+Z5 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vmain
 R1
-Z6 w1414683734
-Z7 8D:\altera\serializer\main.sv
-Z8 FD:\altera\serializer\main.sv
-L0 6
-R2
-Z9 !s108 1414683750.538000
-Z10 !s107 counter.sv|D:\altera\serializer\main.sv|
-Z11 !s90 -reportprogress|300|-work|work|-vopt|-sv|D:\altera\serializer\main.sv|
+Z6 IH556]a2@YWm?Sk^MY<>nD0
+Z7 VbBLKLIO^^Cb[GHOh6A?EZ2
+Z8 !s105 main_sv_unit
+S1
 R3
-!s85 0
-!s100 GH?ai6<7?iO1all4m;VP:3
-!i10b 1
-vtestbench
+Z9 w1414700922
+Z10 8D:/altera/serializer/main.sv
+Z11 FD:/altera/serializer/main.sv
+L0 6
 R4
-VhGfW:390DM[oDMzegDH9`2
 r1
 31
-Il=@@Nk@PMd?eKlLJYZcRd1
+Z12 !s108 1414700926.931000
+Z13 !s107 counter.sv|D:/altera/serializer/main.sv|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|D:/altera/serializer/main.sv|
 R5
-S1
+Z15 !s100 =Wag`S_1SC0S_?_n^6JQ80
+!i10b 1
+!s85 0
+vsrializer
 R1
-R6
-R7
+Z16 I0PlPn>CEzB]g9z<5A@IhT2
+Z17 VnXQm0TM_Ie>f5L3T4h<4f3
 R8
-L0 45
-R2
-R9
+S1
+R3
+Z18 w1414700954
 R10
 R11
-R3
-!s85 0
-!s100 [^dg^FIG6M2_jkY?f5TBD2
+L0 6
+R4
+r1
+31
+Z19 !s108 1414700959.336000
+R13
+R14
+R5
 !i10b 1
+Z20 !s100 goOY^nGOz[hJba82BcG1i1
+!s85 0
+vtestbench
+R1
+Z21 IF^85VT3zf_2J>MKK05?:S3
+Z22 VhGfW:390DM[oDMzegDH9`2
+R8
+S1
+R3
+R18
+R10
+R11
+L0 45
+R4
+r1
+31
+R19
+R13
+R14
+R5
+!i10b 1
+Z23 !s100 nc1D_?kaBIJB8<6HCJ0z]2
+!s85 0

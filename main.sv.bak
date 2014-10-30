@@ -3,7 +3,7 @@
 //****************************************************************
 `include "counter.sv"
 
-module srializer(input logic clk_i, rst_i, data_val_i, 
+module main(input logic clk_i, rst_i, data_val_i, 
             input logic [15:0] data_i,
             input logic [4:0] data_mod_i ,
             output logic ser_data_o, ser_data_val_o,
@@ -11,7 +11,7 @@ module srializer(input logic clk_i, rst_i, data_val_i,
             );
 
 
-logic [4:0] count;
+bit [4:0] count;
 bit overflow;
 
 counter counter_inst(clk_i, rst_i, data_val_i, count, data_mod_i, overflow);
@@ -51,7 +51,7 @@ logic [4:0] data_mod_i = 5'b00100;
 logic ser_data_o, ser_data_val_o;
 bit busy_o;  
 
-  srializer DUT  (.* , .rst_i(1'b0));
+  main DUT  (.* , .rst_i(1'b0));
 
 
 always_ff @(posedge clk_i) begin
