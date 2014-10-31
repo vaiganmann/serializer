@@ -23,6 +23,7 @@ always_comb begin
 end
 
 always_comb begin
+counter_disable = 0;
     if ((data_mod_i-1)<3) begin
        ser_data_o = 0;
        ser_data_val_o = 0;
@@ -53,10 +54,10 @@ endmodule
 module testbench;
 
 
-logic clk_i, rst_i, data_val_i = 1; 
-logic [15:0] data_i = 16'b1010101010101010;
-logic [4:0] data_mod_i = 5'b00110;
-logic ser_data_o, ser_data_val_o;
+bit clk_i, rst_i, data_val_i = 1; 
+bit [15:0] data_i = 16'b1010101010101010;
+bit [4:0] data_mod_i = 5'b00110;
+bit ser_data_o, ser_data_val_o;
 bit busy_o;  
 
   srializer DUT  (.* , .rst_i(1'b0));
